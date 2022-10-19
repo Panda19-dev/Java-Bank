@@ -7,7 +7,11 @@ import java.util.HashMap;
 
 public class Bank {
 
-    HashMap<Integer, Customer> customers = new HashMap<>();
+    HashMap<String, Customer> customers = new HashMap<>();
+
+    public void newCustomer() {
+
+    }
 
 
 }

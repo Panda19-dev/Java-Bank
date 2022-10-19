@@ -1,32 +1,40 @@
 package Bank.Account;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
-public class ClientAccount {
+public class BankAccount {
 
     int accountNumber;
     double balance;
 
-    ArrayList<Transactions> transactions = new ArrayList<>();
+    ArrayList<Transaction> transactions = new ArrayList<>();
 
-    ClientAccount(int accountNumber, double balance) {
+    BankAccount(int accountNumber, double balance) {
         this.accountNumber = accountNumber;
         this.balance = balance;
+    }
+
+    public ArrayList<Transaction> getTransactions() {
+        return transactions;
     }
 
     public double getBalance() {
         return balance;
     }
 
-    public void setBalance(double newBalance) {
+    public void setBalance(double newBalance) {  //Admin interface
         this.balance = newBalance;
     }
 
     public void addBalance(double income) {
+        transactions.add(new Transaction(income));
         this.balance += income;
     }
 
     public void withdrawBalance(double income) {
+        transactions.add(new Transaction(income));
         this.balance -= income;
     }
 

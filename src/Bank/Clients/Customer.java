@@ -1,16 +1,16 @@
 package Bank.Clients;
 
-import Bank.Account.ClientAccount;
+import Bank.Account.BankAccount;
 
 public class Customer {
 
-    ClientAccount ca;
+    BankAccount ca;
     String firstName;
     String lastName;
-    int socialSecurityNumber;
+    String socialSecurityNumber; //This is a string since this number could start with a 0.
     String partnerInformation;
 
-    Customer(ClientAccount ca, String firstName, String lastName, int socialSecurityNumber, String partnerInformation) {
+    Customer(BankAccount ca, String firstName, String lastName, String socialSecurityNumber, String partnerInformation) {
         this.ca = ca;
         this.firstName = firstName;
         this.lastName = lastName;

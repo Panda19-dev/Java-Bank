@@ -1,18 +1,20 @@
 package Bank.Account;
 
-import Bank.Clients.Customer;
-
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.HashMap;
 
-public class Transactions {
-
+public class Transaction {
     double amount;
     DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
     LocalDateTime now = LocalDateTime.now();
-    //System.out.println(dtf.format(now));
+    String date = dtf.format(now);
+    Transaction(double amount) {
+        this.amount = amount;
 
-    Transactions() {
+    }
+
+    public void showTransactions(double amount) {
 
     }
 }
