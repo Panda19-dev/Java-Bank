@@ -6,15 +6,17 @@ import java.util.HashMap;
 
 public class Transaction {
     double amount;
+    LocalDateTime time;
     DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
-    LocalDateTime now = LocalDateTime.now();
-    String date = dtf.format(now);
     Transaction(double amount) {
         this.amount = amount;
-
+        this.time = LocalDateTime.now();
     }
 
-    public void showTransactions(double amount) {
+    public void PrintDate() {
+        System.out.println(dtf.format(time));
+    }
+    public void ShowTransaction() {
 
     }
 }

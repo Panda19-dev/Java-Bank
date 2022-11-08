@@ -11,7 +11,7 @@ public class BankAccount {
 
     ArrayList<Transaction> transactions = new ArrayList<>();
 
-    BankAccount(int accountNumber, double balance) {
+    public BankAccount(int accountNumber, double balance) {
         this.accountNumber = accountNumber;
         this.balance = balance;
     }
